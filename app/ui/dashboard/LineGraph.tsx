@@ -23,7 +23,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export default function LineGraph({ kwhs }: any) {
+export default function LineGraph({ kwhs }: { kwhs: Kwh }) {
   //   console.log("LINE GRAPH: ", JSON.stringify(kwhs, null, 2));
   console.log(typeof kwhs);
   return (
