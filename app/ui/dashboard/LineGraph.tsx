@@ -10,7 +10,7 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "@/components/ui/chart";
-// import { Kwh } from "@/sanity/types";
+import { Kwh } from "@/sanity/types";
 
 const chartConfig = {
   desktop: {
@@ -23,9 +23,9 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export default function LineGraph({ kwhs }: { kwhs: any }) {
-  console.log("LINE GRAPH: ", JSON.stringify(kwhs, null, 2));
-
+export default function LineGraph({ kwhs }: any) {
+  //   console.log("LINE GRAPH: ", JSON.stringify(kwhs, null, 2));
+  console.log(typeof kwhs);
   return (
     <ChartContainer className="" config={chartConfig}>
       <LineChart
