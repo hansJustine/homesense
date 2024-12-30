@@ -8,7 +8,7 @@ import {
 import LineGraph from "./LineGraph";
 // import { client } from "@/sanity/lib/client";
 import { GET_KWHS } from "@/sanity/lib/queries";
-import { sanityFetch, SanityLive } from "@/sanity/lib/live";
+import { sanityFetch } from "@/sanity/lib/live";
 
 export default async function ElecChart() {
   //   const kwhs = await client.fetch(GET_KWHS);
