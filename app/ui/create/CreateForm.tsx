@@ -25,7 +25,7 @@ export default function CreateForm() {
       action={() => {
         handleFormSubmit();
       }}
-      className="flex flex-col gap-2 bg-blue-100"
+      className="flex flex-col gap-2"
     >
       <div>
         <label
@@ -42,7 +42,7 @@ export default function CreateForm() {
           value={kw}
           onChangeCapture={(e) => setKw(e.currentTarget.value)}
           placeholder="Killo-watt"
-          className="w-64 md:w-64"
+          className="w-64 w-64"
         />
       </div>
       <div>
