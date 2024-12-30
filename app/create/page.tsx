@@ -14,7 +14,7 @@ export default function page() {
         <h1 className="font-bold text-txl tracking-tight lg:text-3xl">
           ADD APPLIANCES
         </h1>
-        <CreateForm />
+        {/* <CreateForm /> */}
       </section>
     </div>
   );
