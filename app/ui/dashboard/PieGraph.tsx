@@ -28,7 +28,11 @@ export default function PieGraph({ appliances }: { appliances: Appliance[] }) {
   }, [appliances]);
 
   const newData = React.useMemo(() => {
-    const data: Array<{}> = [];
+    const data: Array<{
+      appliance: string | undefined;
+      price: number;
+      fill: string | undefined;
+    }> = [];
     appliances.map((curr) => {
       const price = calculateConsumpPerDay(
         curr.powerKw,
