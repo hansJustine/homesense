@@ -6,7 +6,6 @@ import { Label, Pie, PieChart } from "recharts";
 import { ChartLegend, ChartLegendContent } from "@/components/ui/chart";
 
 import {
-  ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
