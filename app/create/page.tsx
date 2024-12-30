@@ -1,5 +1,6 @@
 import React from "react";
 import CreateForm from "../ui/create/CreateForm";
+import AddAppliance from "../ui/create/AddAppliance";
 
 export default function page() {
   return (
@@ -14,7 +15,7 @@ export default function page() {
         <h1 className="font-bold text-txl tracking-tight lg:text-3xl">
           ADD APPLIANCES
         </h1>
-        {/* <CreateForm /> */}
+        <AddAppliance />
       </section>
     </div>
   );

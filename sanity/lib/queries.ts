@@ -5,3 +5,12 @@ export const GET_KWHS = defineQuery(`*[_type == "kwh"] | order(_createdAt asc) {
   kwh,
   date
 }`)
+
+export const GET_APPLIANCES = defineQuery(`*[_type == "appliance"] {
+  _id,
+  appliance,
+  powerKw,
+  usageHour,
+  priceKwh,
+  color
+}`)

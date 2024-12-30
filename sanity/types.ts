@@ -131,6 +131,19 @@ export type SanityAssetSourceData = {
   url?: string;
 };
 
+export type Appliance = {
+  _id: string;
+  _type: "appliance";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  appliance?: string;
+  powerKw?: number;
+  usageHour?: number;
+  priceKwh?: number;
+  color?: string;
+};
+
 export type Kwh = {
   _id: string;
   _type: "kwh";
@@ -141,5 +154,5 @@ export type Kwh = {
   date?: string;
 };
 
-export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData | Kwh;
+export type AllSanitySchemaTypes = SanityImagePaletteSwatch | SanityImagePalette | SanityImageDimensions | SanityImageHotspot | SanityImageCrop | SanityFileAsset | SanityImageAsset | SanityImageMetadata | Geopoint | Slug | SanityAssetSourceData | Appliance | Kwh;
 export declare const internalGroqTypeReferenceTo: unique symbol;

@@ -2,7 +2,6 @@
 
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
-// import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { createKw } from "@/lib/actions";
 import { Calendar } from "@nextui-org/calendar";
@@ -16,7 +15,7 @@ export default function CreateForm() {
   const [kw, setKw] = useState<string>();
 
   const handleFormSubmit = async () => {
-    const newDate = `${date.year}-${date.month}-${date.day}`;
+    const newDate = `${date.year}-${date.month < 10 ? 0 : ""}${date.month}-${date.day < 10 ? 0 : ""}${date.day}`;
     console.log(newDate, kw);
     const newData = { kwh: Number(kw), date: newDate };
     const res = await createKw(newData);
@@ -57,12 +56,6 @@ export default function CreateForm() {
         >
           Enter Month
         </label>
-        {/* <Calendar
-          mode="single"
-          value={date}
-          onChange={setDate}
-          className="rounded-md border w-64"
-        /> */}
         <Calendar aria-label="date" value={date} onChange={setDate} />
       </div>
       <Button className="bg-blue-500 hover:bg-blue-600 w-64 mt-2">

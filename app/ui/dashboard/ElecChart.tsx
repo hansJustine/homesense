@@ -28,7 +28,7 @@ export default async function ElecChart() {
         </CardContent>
       </Card>
 
-      <SanityLive />
+      {/* <SanityLive /> */}
     </>
   );
 }
