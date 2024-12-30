@@ -10,7 +10,7 @@ import { CalendarDate, parseDate } from "@internationalized/date";
 
 export default function CreateForm() {
   // let curDate = new Date().toISOString().split("T")[0];
-  let [date, setDate] = useState<CalendarDate>(
+  const [date, setDate] = useState<CalendarDate>(
     parseDate(new Date().toISOString().split("T")[0])
   );
   const [kw, setKw] = useState<string>();
