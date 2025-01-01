@@ -16,10 +16,10 @@ const links = [
   { name: "Dashboard", href: "/dashboard", icon: ChartPieIcon },
   {
     name: "Invoices",
-    href: "/create",
+    href: "/dashboard/electricity",
     icon: DocumentDuplicateIcon,
   },
-  { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
+  { name: "Customers", href: "/dashboard/water", icon: UserGroupIcon },
 ];
 
 export default function SideNavLink() {
