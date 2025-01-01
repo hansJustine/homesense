@@ -20,7 +20,7 @@ export default async function ElecChart() {
     <>
       <Card className="basis-1/2 flex-grow">
         <CardHeader>
-          <CardTitle>Line Chart - Dots</CardTitle>
+          <CardTitle>Monthly Reading</CardTitle>
           <CardDescription>Kilowatt-hour Monthly</CardDescription>
         </CardHeader>
         <CardContent>
