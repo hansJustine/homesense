@@ -14,8 +14,12 @@ export default function AddAppliance() {
   const handleFormSubmit = async () => {
     const watts2 = watts || 0;
     const wattsToKw = watts2 / 1000;
-    const data = { appliance: appl, powerKw: wattsToKw, usageHour, priceKwh };
+    const data = { appliance: appl, usageHour, priceKwh, powerKw: wattsToKw };
     await createAppliance(data);
+    setAppl("");
+    setWatts(0);
+    setUsageHour(0);
+    setPriceKwh(0);
     console.log(data);
   };
 
