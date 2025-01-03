@@ -7,12 +7,14 @@ import { createAppliance } from "@/lib/actions";
 
 export default function AddAppliance() {
   const [appl, setAppl] = useState<string>();
-  const [powerKw, setPowerKw] = useState<number>();
+  const [watts, setWatts] = useState<number>();
   const [usageHour, setUsageHour] = useState<number>();
   const [priceKwh, setPriceKwh] = useState<number>();
 
   const handleFormSubmit = async () => {
-    const data = { appliance: appl, powerKw, usageHour, priceKwh };
+    const watts2 = watts || 0;
+    const wattsToKw = watts2 / 1000;
+    const data = { appliance: appl, powerKw: wattsToKw, usageHour, priceKwh };
     await createAppliance(data);
     console.log(data);
   };
@@ -54,10 +56,8 @@ export default function AddAppliance() {
           name="powerKw"
           type="number"
           required
-          value={powerKw}
-          onChangeCapture={(e) =>
-            setPowerKw(Number(e.currentTarget.value) / 1000)
-          }
+          value={watts}
+          onChangeCapture={(e) => setWatts(Number(e.currentTarget.value))}
           placeholder="20 watts"
           className="w-64 w-64"
         />

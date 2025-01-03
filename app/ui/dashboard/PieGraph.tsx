@@ -106,7 +106,7 @@ export default function PieGraph({ appliances }: { appliances: Appliance[] }) {
         </Pie>
         <ChartLegend
           content={<ChartLegendContent nameKey="appliance" />}
-          className="-translate-y-2 overflow-x-auto p-2 w-full gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+          className="-translate-y-2 overflow-x-auto p-8 w-full gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
         />
       </PieChart>
     </ChartContainer>
