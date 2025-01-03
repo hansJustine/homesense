@@ -47,7 +47,7 @@ export default function AddAppliance() {
           htmlFor="powerKw"
           className="scroll-m-20 text-1xl font-semibold tracking-tight"
         >
-          Power (kW)
+          Power (watts)
         </label>
         <Input
           id="powerKw"
@@ -55,8 +55,10 @@ export default function AddAppliance() {
           type="number"
           required
           value={powerKw}
-          onChangeCapture={(e) => setPowerKw(Number(e.currentTarget.value))}
-          placeholder="20 kW"
+          onChangeCapture={(e) =>
+            setPowerKw(Number(e.currentTarget.value) / 1000)
+          }
+          placeholder="20 watts"
           className="w-64 w-64"
         />
       </div>

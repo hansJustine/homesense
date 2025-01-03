@@ -10,7 +10,7 @@ export default async function AppliancesChart() {
   console.log("appliances", appliances);
   return (
     <>
-      <Card className="flex flex-col basis-1/2">
+      <Card className="flex flex-col basis-1/2 ">
         <CardHeader className="items-center pb-0">
           <CardTitle>Appliances Consumption</CardTitle>
           {/* <CardDescription>January - June 2024</CardDescription> */}

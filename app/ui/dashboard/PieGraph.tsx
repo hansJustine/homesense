@@ -60,7 +60,7 @@ export default function PieGraph({ appliances }: { appliances: Appliance[] }) {
   return (
     <ChartContainer
       config={chartConfig}
-      className="mx-auto aspect-square max-h-[250px]"
+      className="mx-auto aspect-square w-full max-h-[250px]"
     >
       <PieChart>
         <ChartTooltip
@@ -106,7 +106,7 @@ export default function PieGraph({ appliances }: { appliances: Appliance[] }) {
         </Pie>
         <ChartLegend
           content={<ChartLegendContent nameKey="appliance" />}
-          className="-translate-y-2 flex-wrap gap-2 [&>*]:basis-1/4 [&>*]:justify-center"
+          className="-translate-y-2 overflow-x-auto p-2 w-full gap-2 w-128 bg-blue-100 [&>*]:basis-1/4 [&>*]:justify-center"
         />
       </PieChart>
     </ChartContainer>
